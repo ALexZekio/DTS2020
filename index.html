@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content=Nanwall">
+		<link rel="stylesheet" href="./assets/css/bootstrap.css">
+		<link rel="shortcut icon" href="./assets/img/favicon.png">
+		<title>白鹤云BaiHeCloud | A.C.N.T</title>
+		<script>
+			function toNum(num) {
+				if (num < 10) {
+					return '0' + num;
+				} else {
+					return "" + num;
+				}
+			}
+			window.onload = function() {
+				// var obj = document.getElementsByTagName("img");
+				var obj = document.getElementsByClassName("clocker")
+
+				function tick() {
+					var time = new Date();
+					var time1 = toNum(time.getHours()) + toNum(time.getMinutes()) + toNum(time.getSeconds());
+					for (var i = 0; i < obj.length; i++) {
+						obj[i].src = './assets/clocker/' + time1[i] + '.gif';
+					}
+				}
+				window.setInterval(tick, 1000);
+				tick();
+			}
+		</script>
+	</head>
+	<body>
+
+		<div style="width:device-width; overflow:auto; border:1px solid #bf0000;">
+			<div class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="./index.html"><span class="thuhidden"><img src="./assets/img/BaiHeCloud.png" alt=""
+								 width="48px"> 白鹤云</span>BaiHeCloud</a>
+					</div><br />
+					<div class="navbar-collapse collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="./index.html">HOME</a></li>
+							<li><a href="javascript:alert('对不起, 该功能暂不可用!')">NEWS</a></li>
+							<li><a href="./donate.html" target="_blank">DONATE</a></li>
+							<li><a href="/cgi-bin/luci">Пульт.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="mirrors">
+				<div class="spacing hidden-xs"></div>
+				<div class="container">
+					<div class="row">
+						<div id="mirror-list" class="col-md-8 table-responsive">
+							<div class="row">
+								<h3><strong>文件列表</strong></h3>
+							</div>
+							<table class="table">
+								<thead>
+									<tr class="row">
+										<th class="col-sm-8">Name</th>
+										<th class="col-sm-4">Last Update</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- 片段0
+								<tr class="row status-success">
+									<td class="col-md-8"><a href="./downloads/ALPAN_MS.7z" class="mirror-item-label" data-original-title=""
+									 title="" target="_blank">
+											Source NAME</a>
+									<td class="col-md-4">
+										Last Update</td>
+									</td>
+								</tr>
+								 									<tr class="row status-success">
+										<td class="col-md-8"><a href="./downloads/ALPAN_MS.zip" class="mirror-item-label" data-original-title=""
+											 title="" target="_blank">
+												ALPAN Main System</a>
+										<td class="col-md-4">
+											____-__-__ __:__ <span class="label label-status label-default hidden-xs">old</span></td>
+										</td>
+									</tr> -->
+									<tr class="row status-success">
+										<td class="col-md-8"><a href="" class="mirror-item-label" data-original-title=""
+											 title="">
+												服务未开启</a>
+										<td class="col-md-4">
+											1970-01-01 00:00 <span class="label label-status label-warning hidden-xs">wip</span></td>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<div class="col-md-4">
+							<div class="spacing hidden-xs"></div>
+							<div id="wizard">
+							</div>
+							<div id="news">
+								<h4><strong>新闻公告</strong></h4>
+								<ul>
+									<li><strong>2020-10-11</strong> 白鹤云官方APP开发中</li>
+									<li><strong>2020-08-22</strong> 主页捐赠接口已开放，支持一下~</li>
+									<li><strong>2020-08-18</strong> 官网已停止访问</li>
+								</ul>
+							</div>
+
+							<div id="download-link">
+								<h4><strong>下载链接</strong></h4>
+								<ul>
+									<li><a href="./volume/doc.zip">官方文档</a></li>
+								</ul>
+							</div>
+
+							<div class="thuhidden">
+								<h4><strong>联系我们</strong></h4>
+								<ul>
+									<li><strong>反馈</strong> <br> <a href="https://github.com/Yousit/DTS20200908/issues">https://github.com/Yousit/DTS20200908/issues</a></li>
+									<li><strong>邮箱</strong> <br> <a id="eib1gieB" href="mailto:bitlex@foxmail.com">bitlex@foxmail.com</a></li>
+								</ul>
+							</div>
+							<div>
+								<h4><strong>喵娘时钟</strong></h4>
+								<ul>
+									<img style="height: 100px;" src="./assets/clocker/0.gif" alt="hour" class="clocker">
+									<img style="height: 100px;" src="./assets/clocker/0.gif" alt="hour" class="clocker">
+									:
+									<img style="height: 100px;" src="./assets/clocker/0.gif" alt="minute" class="clocker">
+									<img style="height: 100px;" src="./assets/clocker/0.gif" alt="minute" class="clocker">
+								</ul>
+							</div>
+							<div>
+								<h4><strong>社区支持</strong></h4>
+								<ul>
+									<li><strong>扫描二维码加入社区交流群</strong> <br> <img class="img-responsive thuhidden" style="margin-top:5%" width="100"
+										 src="./assets/img/team_QR%20.png"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="footerwrap" class="tuna-foot-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-4">
+							<p class="thuhidden"><a href="https://github.com/Yousit/DTS20200908">Powered by <c> A.C.N.T(Atomic) / DTS
+										2020.09.08.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
